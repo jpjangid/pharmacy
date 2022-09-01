@@ -1,0 +1,99 @@
+<ng-sidenav-container>
+    <ng-sidenav [expanded]="isExpanded" [drawerState]="state" [drawerWidth]="'15.8rem'" [drawerWidthCollapsed]="'60px'"
+         style="z-index: -1;">
+        <div class="menu ">
+            <div class="item ">
+                <div class=" item-body ">
+                    <div class="icon ">
+                        <div class="nav_container ">
+                            <div class="navigation ">
+                                <ul class="head_ul">
+                                    <li>
+                                        <div routerLink="" class=" nav-content ">
+                                            <span class="icon1 "><i class="fas fa-prescription"></i></span>
+                                            <span *hiddenOnCollapsed="isExpanded " class="title ">Pharmacy</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <div routerLink="" class=" nav-content " routerLinkActive="active-link"
+                                            [routerLinkActiveOptions]=" {exact : true} ">
+                                            <span class="icon1 "><i class="far fa-home "></i></span>
+                                            <span *hiddenOnCollapsed="isExpanded " class="title ">Dashboard</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div routerLink="customers" class=" nav-content "
+                                            routerLinkActive="active-link ">
+                                            <span class="icon1 "><i class="fal fa-users "></i></span>
+                                            <span *hiddenOnCollapsed="isExpanded " class="title ">Customers</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div routerLink="message" class=" nav-content " routerLinkActive="active-link ">
+                                            <span class="icon1 "><i class="fad fa-comments-alt "></i></span>
+                                            <span *hiddenOnCollapsed="isExpanded " class="title ">Message</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div routerLink="help" class=" nav-content " routerLinkActive="active-link ">
+                                            <span class="icon1 "><i class="fad fas fa-question "></i></span>
+                                            <span *hiddenOnCollapsed="isExpanded " class="title ">Help</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div routerLink="settings" class=" nav-content "
+                                            routerLinkActive="active-link ">
+                                            <span class="icon1 "><i class="fas fa-users-cog "></i></span>
+                                            <span *hiddenOnCollapsed="isExpanded " class="title ">Settings</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div routerLink="password" class=" nav-content "
+                                            routerLinkActive="active-link ">
+                                            <span class="icon1 "><i class="fad fas fa-unlock-alt "></i></span>
+                                            <span *hiddenOnCollapsed="isExpanded " class="title ">Password</span>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div routerLink="sign-out" class=" nav-content "
+                                            routerLinkActive="active-link ">
+                                            <span class="icon1 "><i class="fad fas fa-sign-out "></i></span>
+                                            <span *hiddenOnCollapsed="isExpanded " class="title ">Sign-Out</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-sidenav>
+    <ng-sidenav-content style="background-color: white;" class="topbar_section">
+        <div class="main">
+            <div class="topbar col">
+                <div class="toggle">
+                    <i class="fas fa-bars" (click)="toggleSidenav()"></i>
+                    <p class="home m-0">Home</p>
+                </div>
+                <!-- userImg -->
+                <div class="searchbox_profile">
+                    <!-- search -->
+                    <div class="search">
+                        <label>
+                            <input type="text" placeholder="Search here">
+                            <i class="fal fa-search"></i>
+                        </label>
+                    </div>
+                    <div class="user">
+                        <img src="https://img.freepik.com/premium-photo/young-handsome-man-with-beard-isolated-keeping-arms-crossed-frontal-position_1368-132662.jpg?w=2000" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+    </ng-sidenav-content>
+</ng-sidenav-container>
